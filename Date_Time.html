@@ -1,0 +1,39 @@
+<html>
+    <head>   
+        <p id="date"></p>
+        <p id="time"></p>  
+        
+        </head>
+    <body>
+    <script>
+//Current Date
+var today = new Date();
+var days=["Sunday.","Monday.","Tuesday.","Wednesday.","Friday.","Saturdat."];
+var dayNum=today.getDay();
+var day=days[dayNum];
+document.getElementById("date").innerHTML=" Sample output : " +" Today is : "+day
+//Current time
+var x=today.getHours();
+var z;
+if (x>12){
+z=x-12;
+var time =z +" PM " + " : " + today.getMinutes() + " : " + today.getSeconds();
+document.getElementById("time").innerHTML=" Current time is : "+time;
+}
+else if (x==12){
+var time =x + " PM "+ " : "+ today.getMinutes() + " : " + today.getSeconds();
+document.getElementById("time").innerHTML=" Current Time is : "+time;
+}
+else if(x==0){
+  z=x+12
+  var time =z + " AM "+ " : "+ today.getMinutes() + " : " + today.getSeconds();
+document.getElementById("time").innerHTML=" Current Time is : "+time;
+}
+else{
+  var time =x + " AM "+ " : "+ today.getMinutes() + " : " + today.getSeconds();
+document.getElementById("time").innerHTML=" Current Time is : "+time;
+}
+    </script>
+    </body>
+
+    </html>
